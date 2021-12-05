@@ -10,52 +10,64 @@
         <div id="author"><span>&copy;&nbsp;</span>xianchenxy</div>
     </div>
 </div>
-$(function() {
-	$('#yes').click(function(event) {
-		modal('我就知道小姐姐您一定会愿意的。(^_^)', function() {
-			$('.page_one').addClass('hide');
-			$('.page_two').removeClass('hide');
-			// typeWrite();
-			fireworks();
 
-		});
-	});
-	$('#no').click(function(event) {
-		modal('明人不说暗话！', A);
-	});
-});
+<html>
+    <head>
 
-function A() {
-	modal('我喜欢你！', B);
-}
+    </head>
+    <body>
+        <script type="text/javascript">
+            //在这里面写你的js代码
+            $(function() {
+            	$('#yes').click(function(event) {
+            		modal('我就知道小姐姐您一定会愿意的。(^_^)', function() {
+            			$('.page_one').addClass('hide');
+            			$('.page_two').removeClass('hide');
+            			// typeWrite();
+            			fireworks();
 
-function B() {
-	modal('我知道你在等我这一句话', C);
-}
+            		});
+            	});
+            	$('#no').click(function(event) {
+            		modal('明人不说暗话！', A);
+            	});
+            });
 
-function C() {
-	modal('请您不要拒绝我', D);
-}
+            function A() {
+            	modal('我喜欢你！', B);
+            }
 
-function D() {
-	modal('拒绝我，不存在的', E);
-}
+            function B() {
+            	modal('我知道你在等我这一句话', C);
+            }
 
-function E() {
-	modal('这辈子都不可能让你离开我', F);
-}
+            function C() {
+            	modal('请您不要拒绝我', D);
+            }
 
-function F() {
-	modal('跟我走吧', G);
-}
+            function D() {
+            	modal('拒绝我，不存在的', E);
+            }
 
-function G() {
-	modal('房产证上写你名', H);
-}
+            function E() {
+            	modal('这辈子都不可能让你离开我', F);
+            }
 
-function H() {
-	modal('我会做饭', I);
-}
+            function F() {
+            	modal('跟我走吧', G);
+            }
+
+            function G() {
+            	modal('房产证上写你名', H);
+            }
+
+            function H() {
+            	modal('我会做饭', I);
+            }
+
+        </script>
+    </body>
+</html>
 
 <div class="textCon">
        <div class="words">小宝贝,今天是认识你的第</div>
