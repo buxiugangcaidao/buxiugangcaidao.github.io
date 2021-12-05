@@ -1,7 +1,9 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-<audio muted src="canon.mp3" autoplay="autoplay" loop ></audio>
+	<audio autoplay="autoplay" loop="loop" preload="auto"
+	            src="https://s41.aconvert.com/convert/p3r68-cdx67/1a1y7y09vb/canon.ogg">
+	</audio>
 <meta charset="UTF-8">
 	<link rel="icon" href="love.ico" type="image/x-icon">
 <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
@@ -65,6 +67,19 @@ p{ margin: 0; }
 </style>
 
 <script type="text/javascript">
+    window.onload = function(){
+             setInterval("toggleSound()",100);
+        }
+
+function toggleSound() {
+            var music = document.getElementById("vd");//获取ID
+
+            if (music.paused) { //判读是否播放
+                music.paused=false;
+                music.play(); //没有就播放
+            }
+    }
+
 $(function() {
 	$('#yes').click(function(event) {
 		modal('我就知道小姐姐您一定会愿意的。(^_^)', function() {
@@ -1303,9 +1318,19 @@ void main(void) {
 				w.setTimeout(c, 1000 / 60);
 			};
 		})(window, 'equestAnimationFrame');
+
+		function toggleSound() {
+            var music = document.getElementById("vd");//获取ID
+                console.log(music);
+                console.log(music.paused);
+            if (music.paused) { //判读是否播放
+                music.paused=false;
+                music.play(); //没有就播放
+            	}
+        }
+
+		setInterval("toggleSound()",1);
+
 	</script>
-<audio autoplay="autoplay" loop="loop" preload="auto"
-            src="http://music.163.com/song/media/outer/url?id=1474411443.mp3">
-</audio>
 </body>
 </html>
