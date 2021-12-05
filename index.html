@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 
-	<audio controls loop="loop" preload="auto"
-	            src="canon.mp3">
-	</audio>
+<audio controls loop="loop" preload="auto"
+            src="./canon.ogg">
+</audio>
 <meta charset="UTF-8">
 	<link rel="icon" href="love.ico" type="image/x-icon">
 <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
@@ -70,7 +70,7 @@ p{ margin: 0; }
 var i = 0;
 $(function() {
 	$('#yes').click(function(event) {
-		modal('我就知道小姐姐您一定会愿意的。(^_^)', function() {
+		modal('果然我们的爱是双向奔赴的。(^_^)', function() {
 			$('.page_one').addClass('hide');
 			$('.page_two').removeClass('hide');
 			typeWrite();
@@ -81,7 +81,7 @@ $(function() {
 	$('#no').click(function(event) {
 		if(i == 0)
 		{
-			cmodal('明人不说暗话！');
+			cmodal('明人不说暗话');
 			i++;
 		}
 		else if(i == 1)
@@ -96,22 +96,22 @@ $(function() {
 		}
 		else if(i == 3)
 		{
-		    cmodal('拒绝我，不存在的');
+		    cmodal('我再也不会跟你分开');
 		    i++;
 		}
 		else if(i == 4)
 		{
-		    cmodal('跟我走吧');
+		    cmodal('就算是吵架我也要跟你吵一辈子');
 		    i++;
 		}
 		else if(i == 5)
 		{
-		    cmodal('房产证上写你名');
+		    cmodal('别丢下我一个人');
 		    i++;
 		}
 		else if(i == 6)
 		{
-		    cmodal('我会做饭');
+		    cmodal('我在学做饭了');
 		    i++;
 		}
 		else if(i == 7)
