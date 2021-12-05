@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-	<audio controls autoplay="autoplay" loop="loop" preload="auto"
+	<audio controls loop="loop" preload="auto"
 	            src="https://s41.aconvert.com/convert/p3r68-cdx67/1a1y7y09vb/canon.ogg">
 	</audio>
 <meta charset="UTF-8">
@@ -43,7 +43,7 @@ p{ margin: 0; }
 .btn-b:after{ content: ''; position: absolute; display: block; width: 60px; height: 30px; background: #c9c9c9; left: 0; top: -29px; border-top-left-radius: 60px; border-top-right-radius: 60px;}
 .container{  }
 .container .mask{ position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.3); }
-.container .modal{ width: 80%; height: 160px; position: absolute; top: 50%; left: 50%; padding: 20px 15px; border-radius: 5px; transform: translate(-50%, -70%); -webkit-transform: translate(-50%，-70%); background: #f3f3f3;}
+.container .modal{ width: 20%; height: 160px; position: absolute; top: 50%; left: 50%; padding: 20px 15px; border-radius: 5px; transform: translate(-50%, -70%); -webkit-transform: translate(-50%，-70%); background: #f3f3f3;}
 .container .modal p{ margin-top: 20px; margin-bottom: 20px; font-size: 16px; color: #353535; text-align: center;}
 .confirm{ display: block; width: 120px; height: 40px; margin: 0 auto; border: none; font-size: 16px; border-radius: 5px; color: #ffffff; background: #f45cae; }
 .type_words{color:#fff;font-size:35px;position:absolute;z-index:10000;width:70%;left:15%;bottom:10%}
@@ -65,8 +65,8 @@ p{ margin: 0; }
 	}
 }
 </style>
-
 <script type="text/javascript">
+var i = 0;
 $(function() {
 	$('#yes').click(function(event) {
 		modal('我就知道小姐姐您一定会愿意的。(^_^)', function() {
@@ -78,12 +78,70 @@ $(function() {
 		});
 	});
 	$('#no').click(function(event) {
-		modal('明人不说暗话！', A);
+		if(i == 0)
+		{
+			cmodal('明人不说暗话！');
+			i++;
+		}
+		else if(i == 1)
+		{
+		    cmodal('我知道你在等我这一句话');
+		    i++;
+		}
+		else if(i == 2)
+		{
+		    cmodal('请您不要拒绝我');
+		    i++;
+		}
+		else if(i == 3)
+		{
+		    cmodal('拒绝我，不存在的');
+		    i++;
+		}
+		else if(i == 4)
+		{
+		    cmodal('跟我走吧');
+		    i++;
+		}
+		else if(i == 5)
+		{
+		    cmodal('房产证上写你名');
+		    i++;
+		}
+		else if(i == 6)
+		{
+		    cmodal('我会做饭');
+		    i++;
+		}
+		else if(i == 7)
+		{
+		    cmodal('爱你。么么哒！');
+		    i++;
+		}
+		else if(i == 8)
+		{
+		    cmodal('行，我们去民政局登记吧');
+		    i++;
+		}
+		else if(i == 9)
+		{
+		    cmodal('好啦好啦 原谅我吧');
+		    i++;
+		}
+		else
+		{
+		    cmodal('我爱你');
+		}
 	});
 });
 
+function DO() {
+	typeWrite();
+	fireworks();
+}
+
 function A() {
-	modal('我喜欢你！', B);
+	modal('', $fucntion());
 }
 
 function B() {
@@ -119,10 +177,7 @@ function I() {
 }
 
 function J() {
-	modal('行，我们去民政局登记吧', function() {
-	typeWrite();
-	fireworks();
-	});
+	modal('行，我们去民政局登记吧', DO);
 }
 
 function fireworks() {
@@ -130,9 +185,23 @@ function fireworks() {
 	$('.page_two').removeClass('hide');
 	$('.page_two').fireworks({
 	  sound: false,
-	  opacity: 0.3,
+	  opacity: 0.6,
 	  width: '100%',
 	  height: '100%'
+	});
+}
+
+function cmodal(content) {
+	var tpl = '<div class="container">'+
+							'<div class="mask"></div>'+
+							'<div class="modal">'+
+								'<p>'+ content +'</p>'+
+								'<button type="button" id="confirm" class="confirm">确定</button>'+
+							'</div>'+
+						'</div>';
+	$('body').append(tpl);
+	$(document).on('click', '.confirm', function() {
+		$('.container').remove();
 	});
 }
 
