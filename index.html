@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-	<audio autoplay="autoplay" loop="loop" preload="auto"
+	<audio control autoplay="autoplay" loop="loop" preload="auto"
 	            src="https://s41.aconvert.com/convert/p3r68-cdx67/1a1y7y09vb/canon.ogg">
 	</audio>
 <meta charset="UTF-8">
@@ -67,19 +67,6 @@ p{ margin: 0; }
 </style>
 
 <script type="text/javascript">
-    window.onload = function(){
-             setInterval("toggleSound()",100);
-        }
-
-function toggleSound() {
-            var music = document.getElementById("vd");//获取ID
-
-            if (music.paused) { //判读是否播放
-                music.paused=false;
-                music.play(); //没有就播放
-            }
-    }
-
 $(function() {
 	$('#yes').click(function(event) {
 		modal('我就知道小姐姐您一定会愿意的。(^_^)', function() {
