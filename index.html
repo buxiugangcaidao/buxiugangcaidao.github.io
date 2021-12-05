@@ -81,12 +81,12 @@ $(function() {
 	$('#no').click(function(event) {
 		if(i == 0)
 		{
-			cmodal('明人不说暗话');
+			cmodal('这不是你的真实想法');
 			i++;
 		}
 		else if(i == 1)
 		{
-		    cmodal('我知道你在等我这一句话');
+		    cmodal('我在想你，我也能感觉到有时候你在想我');
 		    i++;
 		}
 		else if(i == 2)
@@ -96,7 +96,7 @@ $(function() {
 		}
 		else if(i == 3)
 		{
-		    cmodal('我再也不会跟你分开');
+		    cmodal('我再也再也不会跟你分开');
 		    i++;
 		}
 		else if(i == 4)
@@ -106,32 +106,28 @@ $(function() {
 		}
 		else if(i == 5)
 		{
-		    cmodal('别丢下我一个人');
+		    cmodal('我知道错了');
 		    i++;
 		}
 		else if(i == 6)
 		{
-		    cmodal('我在学做饭了');
+		    cmodal('我把之前说过的话都收回，我不跟你做朋友，我也不会说再见');
 		    i++;
 		}
 		else if(i == 7)
 		{
-		    cmodal('爱你。么么哒！');
+		    cmodal('我们不应该停在这里，我们应该还有很多很多关于我们的以后');
 		    i++;
 		}
 		else if(i == 8)
 		{
-		    cmodal('行，我们去民政局登记吧');
-		    i++;
-		}
-		else if(i == 9)
-		{
-		    cmodal('好啦好啦 原谅我吧');
+		    cmodal('我想说的话都在 愿意 里面！');
 		    i++;
 		}
 		else
 		{
 		    cmodal('我爱你');
+		    i++;
 		}
 	});
 });
@@ -139,46 +135,6 @@ $(function() {
 function DO() {
 	typeWrite();
 	fireworks();
-}
-
-function A() {
-	modal('', $fucntion());
-}
-
-function B() {
-	modal('我知道你在等我这一句话', C);
-}
-
-function C() {
-	modal('请您不要拒绝我', D);
-}
-
-function D() {
-	modal('拒绝我，不存在的', E);
-}
-
-function E() {
-	modal('这辈子都不可能让你离开我', F);
-}
-
-function F() {
-	modal('跟我走吧', G);
-}
-
-function G() {
-	modal('房产证上写你名', H);
-}
-
-function H() {
-	modal('我会做饭', I);
-}
-
-function I() {
-	modal('爱你。么么哒！', J)
-}
-
-function J() {
-	modal('行，我们去民政局登记吧', DO);
 }
 
 function fireworks() {
